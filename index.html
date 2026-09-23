@@ -6,212 +6,170 @@
     <title>Manual PS2 - Vitorio Imports & Store</title>
     <style>
         :root {
-            --primary: #4f46e5;
-            --secondary: #312e81;
-            --success: #16a34a;
-            --warning: #ca8a04;
-            --danger: #dc2626;
-            --background: #f8fafc;
-            --surface: #ffffff;
-            --text: #1e293b;
-            --text-light: #64748b;
-            --border: #e2e8f0;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --primary: #24292e;
+            --accent: #0366d6;
+            --bg: #f6f8fa;
+            --text: #24292e;
+            --border: #e1e4e8;
+            --warning-bg: #fff5b8;
+            --warning-border: #ffd33d;
+            --info-bg: #dbedff;
+            --info-border: #0366d6;
         }
         body {
-            background-color: var(--background);
-            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
             padding: 20px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--surface);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 20px;
-        }
-        h1 {
-            color: var(--secondary);
-            font-size: 24px;
-            margin-top: 10px;
-        }
-        h2 {
-            color: var(--primary);
-            font-size: 20px;
-            margin: 25px 0 15px;
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-        }
-        h3 {
-            font-size: 16px;
-            margin: 15px 0 10px;
-            color: var(--text);
-        }
-        p {
-            margin-bottom: 15px;
-            color: var(--text);
-        }
-        .subtitle {
-            color: var(--text-light);
-            font-size: 14px;
-        }
-        .highlight-box {
-            background-color: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .method {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        ol, ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .problem-item {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
             background: #fff;
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-        .problem-title {
-            font-weight: bold;
-            color: var(--danger);
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-bottom: 10px;
+        .header-logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 150px;
+            height: auto;
         }
-        .cause-effect {
-            margin-bottom: 8px;
-            padding-left: 5px;
+        h1 { border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--primary); text-align: center; }
+        h2 { margin-top: 30px; border-bottom: 1px solid var(--border); padding-bottom: 5px; color: var(--primary); }
+        h3 { color: #d93f0b; }
+        .support-box {
+            margin-top: 40px; 
+            padding: 20px; 
+            background: #f1f8ff; 
+            border: 1px solid #c8e1ff; 
+            border-radius: 6px;
+            text-align: center;
         }
         .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            background-color: #25d366;
+            display: inline-block;
+            background-color: #25D366;
             color: white;
             text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 30px;
+            padding: 12px 28px;
+            border-radius: 5px;
             font-weight: bold;
-            margin-top: 20px;
-            box-shadow: 0 4px 6px rgb(37 211 102 / 0.2);
-            transition: transform 0.2s;
+            margin-top: 15px;
+            transition: background 0.2s;
         }
-        .btn-whatsapp:hover {
-            transform: scale(1.03);
+        .btn-whatsapp:hover { background-color: #128C7E; }
+        .alert {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
         }
+        .info-box {
+            background-color: var(--info-bg);
+            border-left: 4px solid var(--info-border);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .step-list { padding-left: 20px; }
+        .step-list li { margin-bottom: 10px; }
         footer {
             text-align: center;
             margin-top: 40px;
-            color: var(--text-light);
-            font-size: 12px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9em;
+            color: #586069;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <div class="subtitle">Vitorio Imports & Store</div>
-        <h1>🎮 Guia de Uso: Memory Card PS2 Bitfunx</h1>
-    </header>
-
+    <!-- Logo da Loja -->
+    <img src="logo.png" alt="Vitorio Imports & Store" class="header-logo">
+    
+    <h1>🎮 Guia de Uso: Memory Card PS2 Bitfunx</h1>
     <p>Obrigado por adquirir seu produto com a <strong>Vitorio Imports & Store</strong>! Este Memory Card transforma o seu PlayStation 2, permitindo rodar jogos via USB (Pen drive/HD Externo) ou Rede. Siga as instruções específicas para o modelo do seu console.</p>
 
-    <div class="highlight-box">
-        <strong>🚀 Atalho de Inicialização Rápida (OPL Direto):</strong> Deixamos o seu Memory Card pré-configurado! Se você ligar o console (seja FAT ou Slim) <strong>segurando o botão ❌ (Xis)</strong> no controle, o sistema tentará dar o boot diretamente para a lista de jogos do <strong>OPL</strong>, sem passar pelos menus.
+    <div class="info-box">
+        <strong>🚀 Atalho de Inicialização Rápida (OPL Direto):</strong> 
+        Deixamos o seu Memory Card pré-configurado! Se você ligar o console (seja FAT ou Slim) **segurando o botão ❌ (Xis)** no controle, o sistema tentará dar o boot diretamente para a lista de jogos do **OPL**, sem passar pelos menus.
     </div>
 
     <h2>🟩 Método 1: PS2 FAT (Modelos SCPH-3XXXX / SCPH-5XXXX) – Sistema FMCB</h2>
-    <div class="method">
-        <p>O <strong>Free McBoot (FMCB)</strong> inicia automaticamente na maioria dos modelos FAT.</p>
-        <ol>
-            <li><strong>Desligue</strong> o videogame completamente.</li>
-            <li>Insira o Memory Card da Bitfunx no <strong>Slot 1</strong> do console.</li>
-            <li>Se for utilizar jogos por USB, conecte seu Pen Drive configurado na porta USB do console.</li>
-            <li><strong>Ligue o console</strong>. O menu modificado do FMCB carregará diretamente na tela.</li>
-            <li>Selecione <strong>OPL (Open PS2 Loader)</strong> para visualizar e iniciar a sua lista de jogos.</li>
-        </ol>
-        <p><em>*Nota: Se o console ligar na tela rotineira do PS2, acesse a opção "Rotina de Pesquisa" (Browser), selecione o Memory Card e retorne ao menu inicial.</em></p>
-    </div>
+    <p>O <strong>Free McBoot (FMCB)</strong> inicia automaticamente na maioria dos modelos FAT.</p>
+    <ol class="step-list">
+        <li><strong>Desligue</strong> o videogame completamente.</li>
+        <li>Insira o Memory Card da Bitfunx no <strong>Slot 1</strong> do console.</li>
+        <li>Se for utilizar jogos por USB, conecte seu Pen Drive configurado na porta USB do console.</li>
+        <li><strong>Ligue o console</strong>. O menu modificado do FMCB carregará diretamente na tela.</li>
+        <li>Selecione <strong>OPL (Open PS2 Loader)</strong> para visualizar e iniciar a sua lista de jogos.</li>
+    </ol>
+    <p><em>Nota: Se o console ligar na tela rotineira do PS2, acesse a opção "Rotina de Pesquisa" (Browser), selecione o Memory Card e retorne ao menu inicial.</em></p>
 
     <h2>🟦 Método 2: PS2 SLIM (Modelos SCPH-7XXXX / SCPH-9XXXX) – Sistema Funtuna</h2>
-    <div class="method">
-        <p>Os consoles Slim (especialmente a série 90000) possuem travas de BIOS que exigem a inicialização manual do <strong>Funtuna</strong>.</p>
-        <p><strong>💡 Dica de Ouro para PS2 Slim:</strong> Além do método manual abaixo, configuramos o seu Memory Card para ativar o Funtuna se você ligar o videogame <strong>segurando o botão R1</strong> no controle. Caso o atalho por comando não funcione no seu aparelho devido ao chip de desbloqueio (Matrix), siga o passo a passo manual a seguir:</p>
-        <ol>
-            <li>Insira o Memory Card no <strong>Slot 1</strong> e ligue o videogame <strong>sem nenhum CD/DVD dentro</strong>.</li>
-            <li>No menu original do PS2, entre em <strong>Rotina de Pesquisa (Browser)</strong>.</li>
-            <li>Selecione o ícone do <strong>Memory Card</strong>.</li>
-            <li>Você verá alguns arquivos de sistema corrompidos ou transparentes (isso é normal e faz parte do exploit). <strong>Aguarde cerca de 5 a 10 segundos</strong> até que os ícones carreguem completamente.</li>
-            <li>Pressione o botão <strong>🔴 (Bolinha)</strong> duas vezes seguidas para voltar ao menu principal do PS2.</li>
-            <li>A tela dará uma piscada rápida e o menu hackeado do Funtuna será carregado. Selecione o <strong>OPL</strong> para jogar.</li>
-        </ol>
-        <p><strong>⚠ Importante para PS2 Slim:</strong> Esse procedimento manual do passo 1 ao 6 (ou o uso do atalho segurando R1) deve ser repetido <strong>toda vez</strong> que o videogame for ligado do zero.</p>
-    </div>
-
-    <h2>🛠 Solução de Problemas (Troubleshooting)</h2>
+    <p>Os consoles Slim (especialmente a série 90000) possuem travas de BIOS que exigem a inicialização manual do <strong>Funtuna</strong>.</p>
     
-    <div class="problem-item">
-        <div class="problem-title">1. Tela travada com o logo do FMCB ou Funtuna</div>
-        <p class="cause-effect"><strong>Causa:</strong> Conflito de hardware ou mau contato nos conectores do Memory Card ou dos dispositivos USB.</p>
-        <p class="cause-effect"><strong>Solução:</strong> Desligue o console. Ligue o console somente com o Memory Card e controle conectado. Após o boot do FMCB, abra o OPL e aguarde a inicialização, após isso insira o seu pendrive ou HD externo. Caso mesmo assim não funcione, efetue a limpeza da entrada de Memory Card com alcool isopropilico e tente novamente.</p>
+    <div class="info-box">
+        <strong>💡 Dica de Ouro para PS2 Slim:</strong> 
+        Além do método manual abaixo, configuramos o seu Memory Card para ativar o Funtuna se você ligar o videogame **segurando o botão R1** no controle. Caso o atalho por comando não funcione no seu aparelho devido ao chip de desbloqueio (Matrix), siga o passo a passo manual a seguir:
     </div>
 
-    <div class="problem-item">
-        <div class="problem-title">2. Tela Preta ao abrir o OPL, uLaunchELF ou qualquer Aplicativo</div>
-        
-        <p class="cause-effect" style="margin-bottom: 12px;"><strong>Causa 1 (Conflito de Chip):</strong> O chip de desbloqueio do seu PS2 (ex: Matrix) pode entrar em conflito físico com o sistema do Memory Card no momento em que um aplicativo tenta iniciar, travando a imagem.</p>
-        <p class="cause-effect" style="margin-bottom: 20px;"><strong>Solução 1:</strong> Desligue o videogame. Ligue-o novamente mantendo pressionado o botão <strong>START</strong> no controle 1 até que apareça a palavra <strong>"DISABLED"</strong> na tela. Em seguida, aperte o botão <em>Reset</em> do videogame apenas uma vez. O console iniciará com o chip desligado e os aplicativos do Memory Card vão abrir perfeitamente. <em>(Nota: Sempre que desligar o videogame da tomada, o chip será reativado).</em></p>
-        
-        <p class="cause-effect" style="margin-bottom: 12px;"><strong>Causa 2 (Configuração de Cabo Errada):</strong> Se você usa um adaptador HDMI (como aquelas caixinhas brancas Mini AV2HDMI) conectado ao cabo original de 3 pinos (Amarelo, Branco e Vermelho), o PS2 não pode estar configurado no modo Componente, pois a tela apagará nos aplicativos.</p>
-        <p class="cause-effect" style="margin-bottom: 20px;"><strong>Solução 2:</strong> Ligue o PS2 <strong>sem o Memory Card</strong> e sem nenhum jogo. Vá em <strong>Configuração do Sistema</strong> -> **Componente Saída Vídeo** e mude de <em>Y Cb/Pb Cr/Pr</em> para <strong>RGB</strong>. Salve, desligue o console e tente novamente.</p>
-        
-        <p class="cause-effect"><strong>💡 Dica de Ouro:</strong> Se você usa monitores ou TVs modernas e a imagem insistir em dar tela preta através de adaptadores comuns, a solução definitiva é adquirir o adaptador <strong>Bitfunx PS2 to HDMI Converter</strong> (aquele dongle pretinho que conecta direto no console, sem a necessidade do cabo AV). Ele processa a mudança de resolução dos aplicativos perfeitamente. <em>(Lembrete: O Bitfunx PS2 to HDMI exige que a Saída de Vídeo esteja em Y Cb/Pb Cr/Pr para funcionar corretamente).</em></p>
+    <ol class="step-list">
+        <li>Insira o Memory Card no <strong>Slot 1</strong> e ligue o videogame <strong>sem nenhum CD/DVD dentro</strong>.</li>
+        <li>No menu original do PS2, entre em <strong>Rotina de Pesquisa (Browser)</strong>.</li>
+        <li>Selecione o ícone do <strong>Memory Card</strong>.</li>
+        <li>Você verá alguns arquivos de sistema corrompidos ou transparentes (isso é normal e faz parte do exploit). <strong>Aguarde cerca de 5 a 10 segundos</strong> até que os ícones carreguem completamente.</li>
+        <li>Pressione o botão <strong>🔴 (Bolinha)</strong> duas vezes seguidas para voltar ao menu principal do PS2.</li>
+        <li>A tela dará uma piscada rápida e o menu hackeado do Funtuna será carregado. Selecione o <strong>OPL</strong> para jogar.</li>
+    </ol>
+    <div class="alert">
+        <strong>⚠️ Importante para PS2 Slim:</strong> Esse procedimento manual do passo 1 ao 6 (ou o uso do atalho segurando R1) deve ser repetido <strong>toda vez</strong> que o videogame for ligado do zero.
     </div>
 
-    <div class="problem-item">
-        <div class="problem-title">3. Os jogos não aparecem na lista do OPL</div>
-        <p class="cause-effect"><strong>Causa:</strong> O Pen Drive ou HD Externo não está formatado corretamente ou os jogos foram transferidos para as pastas erradas.</p>
-        <p class="cause-effect"><strong>Solução:</strong> O dispositivo USB <strong>obrigatoriamente</strong> deve estar formatado em <strong>FAT32</strong>. Jogos em formato .ISO devem ficar dentro da pasta chamada DVD (em maiúsculo) na raiz do Pen Drive. Jogos maiores de 4GB precisam ser divididos usando o programa <em>USBUtil</em>.</p>
-    </div>
+    <h2>🛠️ Solução de Problemas (Troubleshooting)</h2>
+    
+    <h3>1. Tela travada com o logo do FMCB ou Funtuna</h3>
+    <ul>
+        <li><strong>Causa:</strong> Conflito de hardware ou mau contato nos conectores do Memory Card ou dos dispositivos USB.</li>
+        <li><strong>Solução:</strong> Desligue o console. Ligue o console somente com o Memory Card e controle conectado. Após o boot do FMCB, abra o OPL e aguarde a inicialização, após isso insira o seu pendrive ou HD externo. Caso mesmo assim não funcione, efetue a limpeza da entrada de Memory Card com alcool isopropilico e tente novamente.</li>
+    </ul>
 
-    <div class="problem-item">
-        <div class="problem-title">4. O console liga direto no menu padrão (rotina de pesquisa) e não altera o sistema</div>
-        <p class="cause-effect"><strong>Causa:</strong> A BIOS do seu PS2 Slim (especialmente modelo 90010 com data code recente) bloqueia a inicialização automática, ou o chip Matrix está interferindo nos comandos de atalho.</p>
-        <p class="cause-effect"><strong>Solução:</strong> No caso do Slim, certifique-se de fazer o <strong>Método 2 (Funtuna)</strong> de forma manual entrando na Rotina de Pesquisa. Se o console tiver chip Matrix clonado, ele pode bloquear os atalhos de botão (R1 ou Xis). Nesse caso, tente desativar o chip temporariamente (ligue o console segurando o botão <em>Start</em> até aparecer "Disabled", depois resete o console e tente os procedimentos).</p>
-    </div>
+    <h3>2. Tela Preta ao abrir o OPL, uLaunchELF ou qualquer Aplicativo</h3>
+    <ul>
+        <li><strong>Causa 1 (Conflito com o chip de desbloqueio):</strong> O chip de desbloqueio do seu PS2 (ex: Matrix) pode entrar em conflito físico com o sistema do Memory Card no momento em que um aplicativo tenta iniciar, travando a imagem.</li>
+        <li><strong>Solução:</strong> Desligue o videogame. Ligue-o novamente mantendo pressionado o botão <strong>START</strong> no controle 1 até que apareça a palavra <strong>"DISABLED"</strong> na tela. Em seguida, aperte o botão <em>Reset</em> do videogame apenas uma vez. O console iniciará com o chip desligado e os aplicativos do Memory Card vão abrir perfeitamente. <em>(Nota: Sempre que desligar o videogame da tomada, o chip será reativado).</li>
+        <li><strong>Causa 2 (Conflito no modo de vídeo):</strong> Se você usa um adaptador HDMI (como aquelas caixinhas brancas Mini AV2HDMI) conectado ao cabo original de 3 pinos (Amarelo, Branco e Vermelho), o PS2 não pode estar configurado no modo Componente, pois a tela apagará nos aplicativos.</li>
+        <li><strong>Solução:</strong> Ligue o PS2 <strong>sem o Memory Card</strong> e sem nenhum jogo. Vá em <strong>Configuração do Sistema</strong> -> **Componente Saída Vídeo** e mude de <em>Y Cb/Pb Cr/Pr</em> para <strong>RGB</strong>. Salve, desligue o console e tente novamente.</li>
+    
+    </ul>
 
-    <center>
-        <a href="#" class="btn-whatsapp">Chamar no WhatsApp</a>
-    </center>
+    <h3>3. Os jogos não aparecem na lista do OPL</h3>
+    <ul>
+        <li><strong>Causa:</strong> O Pen Drive ou HD Externo não está formatado corretamente ou os jogos foram transferidos para as pastas erradas.</li>
+        <li><strong>Solução:</strong> O dispositivo USB <strong>obrigatoriamente</strong> deve estar formatado em <strong>FAT32</strong>. Jogos em formato .ISO devem ficar dentro da pasta chamada <code>DVD</code> (em maiúsculo) na raiz do Pen Drive. Jogos maiores de 4GB precisam ser divididos usando o programa <em>USBUtil</em>.</li>
+    </ul>
+
+    <h3>4. O console liga direto no menu padrão (rotina de pesquisa) e não altera o sistema</h3>
+    <ul>
+        <li><strong>Causa:</strong> A BIOS do seu PS2 Slim (especialmente modelo 90010 com data code recente) bloqueia a inicialização automática, ou o chip Matrix está interferindo nos comandos de atalho.</li>
+        <li><strong>Solução:</strong> No caso do Slim, certifique-se de fazer o <strong>Método 2 (Funtuna)</strong> de forma manual entrando na Rotina de Pesquisa. Se o console tiver chip Matrix clonado, ele pode bloquear os atalhos de botão (R1 ou Xis). Nesse caso, tente desativar o chip temporariamente (ligue o console segurando o botão <em>Start</em> até aparecer "Disabled", depois resete o console e tente os procedimentos).</li>
+    </ul>
+
+    <!-- Caixa de suporte com botão centralizado -->
+    <div class="support-box">
+        <p style="margin: 0; font-weight: bold;">Precisa de suporte adicional? Entre em contato conosco através do nosso <a href="https://wa.me/5511983103196?text=Olá, preciso de suporte para o Memory Card FMCB para PS2" target="_blank" style="color: #25D366; text-decoration: underline;">Whatsapp</a>.</p>
+        <a href="https://wa.me/5511983103196?text=Olá, preciso de suporte para o Memory Card FMCB para PS2" target="_blank" class="btn-whatsapp">Chamar no WhatsApp</a>
+    </div>
 
     <footer>
-        © 2026 - Vitorio Imports & Store
+        <p>&copy; 2026 - Vitorio Imports & Store</p>
     </footer>
 </div>
 
